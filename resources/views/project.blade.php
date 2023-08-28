@@ -159,9 +159,9 @@
                                         <p class="fw-normal mb-1">{{$item->deskripsi}}</p>
 
                                      </td>
-
-
-                                        <td> <p class="fw-normal mb-1"><img src="/storage/{{$item->foto}}" width="150"></p></td>
+                                      <td><p class="fw-normal mb-1">
+                                            <img src="/storage/{{ $item->foto }}" width="100" alt="">    
+                                        </p></td>
 
                                      
                                    <td>
