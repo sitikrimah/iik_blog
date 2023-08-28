@@ -21,8 +21,8 @@ class ProjectController extends Controller
             'tombol'=>'simpan',
             'project'=>(object)[
                 'name'=>'',
-                'deskripsi'=>''
-                // 'foto'=>''
+                'deskripsi'=>'',
+                'foto'=>''
             ],
         ];
         return view ('projectform', $data);
@@ -32,8 +32,8 @@ class ProjectController extends Controller
         Project::create([
 
             'name'=>$req->name,
-            'deskripsi'=>$req->deskripsi
-            // 'foto' => $req->file('foto')->store('foto')
+            'deskripsi'=>$req->deskripsi,
+            'foto' => $req->file('foto')->store('foto')
 
             // 'foto'=>$req->foto
         ]);
@@ -56,7 +56,9 @@ class ProjectController extends Controller
 
         Project::where('id',$req->id)->update([
             'name'=>$req->name,
-            'deskripsi'=>$req->deskripsi
+            'deskripsi'=>$req->deskripsi,
+            // 'foto' => $req->file('foto')->store('foto')
+            'foto' => $req->file('foto')->store('foto')
 
         ]);
         return redirect('project');

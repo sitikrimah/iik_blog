@@ -54,7 +54,7 @@
            }
 </style>
 </head>
-{{-- <body>
+<body>
     <form action="{{$action}}" method="post" enctype="multipart/form-data">
     {{-- <form action="{{ url('team/create') }}" method="post" enctype="multipart/form-data"> --}}
         @csrf
@@ -73,10 +73,10 @@
                                 <label for="" class="form-label">DESKRIPSI</label>
                                 <input type="text" name="deskripsi" id="deskripsi" value="{{$project->deskripsi}}" class="form-control" placeholder="Silahkan di isi">
                             </div>
-                            {{-- <div class="col-mb-3">
+                            <div class="col-mb-3">
                                 <label for="" class="form-label">foto</label>
                                 <input type="file" name="foto" id="foto" value="{{$project->foto}}" class="form-control" placeholder="Silahkan di isi">
-                            </div> --}}
+                            </div>
 
                             <div class="pt-3 ">
                                 <input type="submit" value="Simpan" class="btn btn-primary">
